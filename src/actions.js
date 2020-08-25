@@ -2,7 +2,8 @@ import {
     FETCH_DATA_ERROR,
     FETCH_DATA_SUCCESS,
     FETCH_DATA_PENDING,
-    DATA_URL
+    DATA_URL,
+    DELETE_ITEM,
 } from "./consts";
 
 export const getURL = () => {
@@ -43,3 +44,10 @@ function fetchDataError(error) {
         payload: error,
     }
 }
+
+export const deleteItem = (id) => {
+    return {
+        type: DELETE_ITEM,
+        payload: id,
+    }
+};

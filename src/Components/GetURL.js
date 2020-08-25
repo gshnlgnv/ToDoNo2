@@ -7,7 +7,7 @@ class GetURLComponent extends Component{
     render() {
         return (
             <div>
-                <button onClick={this.props.getURL}> Get Data </button>
+                <button onClick={this.props.getURL}> Upload Data </button>
             </div>
         )
     }

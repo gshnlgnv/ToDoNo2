@@ -4,3 +4,9 @@ table {border: 1px solid grey;}
 th {border: 1px solid grey;}
 /* границы ячеек тела таблицы */
 td {border: 1px solid grey;}
+
+.pic {
+    width: 10px;
+    height: 10px;
+}
+
