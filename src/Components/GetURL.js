@@ -2,12 +2,13 @@ import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import {getURL} from '../actions';
+import '../Styles/GetURL.css'
 
 class GetURLComponent extends Component{
     render() {
         return (
             <div>
-                <button onClick={this.props.getURL}> Upload Data </button>
+                <button className="btn__add__url" onClick={this.props.getURL}> Загрузить </button>
             </div>
         )
     }
