@@ -6,3 +6,5 @@ export const DELETE_ITEM = "DELETE_ITEM";
 export const MODAL_ADD_ITEM = "MODAL_ADD_ITEM";
 export const ADD_ITEM_FROM_INPUT = "ADD_ITEM_FROM_INPUT";
 export const CLOSE_MODAL_WINDOW = "CLOSE_MODAL_WINDOW";
+export const INPUT_ERROR = "INPUT_ERROR";
+export const CLEAR_ERROR = "CLEAR_ERROR";

@@ -7,6 +7,8 @@ import {
     MODAL_ADD_ITEM,
     ADD_ITEM_FROM_INPUT,
     CLOSE_MODAL_WINDOW,
+    INPUT_ERROR,
+    CLEAR_ERROR,
 } from "./consts";
 
 export const getURL = () => {
@@ -71,5 +73,17 @@ export const addItemFromInput = (item) => {
 export const closeModalWindow = () => {
     return {
         type: CLOSE_MODAL_WINDOW,
+    }
+};
+
+export const inputError = () => {
+    return {
+        type: INPUT_ERROR,
+    }
+};
+
+export const clearError = () => {
+    return {
+        type: CLEAR_ERROR,
     }
 };

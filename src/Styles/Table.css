@@ -1,12 +1,32 @@
-/* внешние границы таблицы серого цвета толщиной 1px */
-table {border: 1px solid grey;}
-/* границы ячеек первого ряда таблицы */
-th {border: 1px solid grey;}
-/* границы ячеек тела таблицы */
-td {border: 1px solid grey;}
+table {
+    border: 1px solid grey;
+}
+
+th {
+    border-bottom: 3px solid #B9B29F;
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    padding: 10px 10px;
+}
+
+.table__item {
+    width: 200px;
+}
+
+tr:nth-child(odd) {
+    background: white;
+}
+
+tr:nth-child(even) {
+    background: lightgray;
+}
 
 .pic {
     width: 10px;
     height: 10px;
+    cursor: pointer;
 }
 
