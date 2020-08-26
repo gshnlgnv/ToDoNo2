@@ -4,6 +4,9 @@ import {
     FETCH_DATA_PENDING,
     DATA_URL,
     DELETE_ITEM,
+    MODAL_ADD_ITEM,
+    ADD_ITEM_FROM_INPUT,
+    CLOSE_MODAL_WINDOW,
 } from "./consts";
 
 export const getURL = () => {
@@ -49,5 +52,24 @@ export const deleteItem = (id) => {
     return {
         type: DELETE_ITEM,
         payload: id,
+    }
+};
+
+export const modalOpenWindow = () => {
+    return {
+        type: MODAL_ADD_ITEM
+    }
+};
+
+export const addItemFromInput = (item) => {
+    return {
+        type: ADD_ITEM_FROM_INPUT,
+        payload: item,
+    }
+};
+
+export const closeModalWindow = () => {
+    return {
+        type: CLOSE_MODAL_WINDOW,
     }
 };

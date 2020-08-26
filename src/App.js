@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {GetURLContainer} from './Components/GetURL';
 import {TableContainer} from './Components/Table';
-import AddUserData from './Components/AddUserData'
+import {AddUserDataContainer} from './Components/AddUserData'
 
 class App extends Component{
   render() {
@@ -9,7 +9,7 @@ class App extends Component{
         <div>
             Список задач
             <GetURLContainer/>
-            <AddUserData/>
+            <AddUserDataContainer/>
             <TableContainer />
         </div>
     )

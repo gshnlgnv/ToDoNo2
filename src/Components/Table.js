@@ -10,8 +10,6 @@ class Table extends Component{
 
     renderTable() {
 
-        console.log("vadim", this.props.data);
-
         if (this.props.data) {
             return  <div>
                 <table>
@@ -20,9 +18,8 @@ class Table extends Component{
                         <tr key={item.id}>
                             <td>{item.id}</td>
                             <td>{item.title}</td>
-                            <td><img className="pic" src={edit}/></td>
-                            <td><img className="pic" src={trash} onClick={ () => {console.log("table id :", item.id);
-                                this.props.deleteItem(item.id)} }/></td>
+                            <td><img alt="edit" className="pic" src={edit}/></td>
+                            <td><img alt="delete" className="pic" src={trash} onClick={ () => this.props.deleteItem(item.id) }/></td>
                         </tr>
                     ))}
                     </tbody>
