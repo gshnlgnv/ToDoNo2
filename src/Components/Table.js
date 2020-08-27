@@ -6,25 +6,35 @@ import edit from '../Pics/edit.png'
 import {bindActionCreators} from "redux";
 import {deleteItem} from '../actions';
 
+import {BrowserRouter, Route, Link} from "react-router-dom";
+import editItemComponent from '../Components/editItemComponent';
+
 class Table extends Component {
 
+
+
     renderTable() {
-        if (this.props.data) {
-            return <div>
-                <table>
-                    <tbody>
-                    {this.props.data.map((item) => (
-                        <tr key={item.id}>
-                            <td>{item.id}</td>
-                            <td className="table__item">{item.title}</td>
-                            <td><img alt="edit" className="pic" src={edit}/></td>
-                            <td><img alt="delete" className="pic" src={trash}
-                                     onClick={() => this.props.deleteItem(item.id)}/></td>
-                        </tr>
-                    ))}
-                    </tbody>
-                </table>
-            </div>
+        if (this.props.data.length > 0) {
+            return <BrowserRouter>
+            <div>
+                    <table>
+                        <tbody>
+                        {this.props.data.map((item, index) => (
+                            <tr key={item.id}>
+                                <td>{index + 1}</td>
+                                <td>{item.id}</td>
+                                <td className="table__item">{item.title}</td>
+                                <td> <Link to={{pathname: "/item/id", }}>  <img alt="edit" className="pic" src={edit}/> </Link>   </td>
+                                <td><img alt="delete" className="pic" src={trash}
+                                         onClick={() => this.props.deleteItem(item.id)}/></td>
+                            </tr>
+                        ))}
+                        </tbody>
+                    </table>
+
+                <Route path={`/item/id`} component={editItemComponent}/>
+                </div>
+            </BrowserRouter>
         } else {
             return <div> Нет данных </div>
         }

@@ -5,6 +5,7 @@ import {bindActionCreators} from "redux";
 import {modalOpenWindow, closeModalWindow, addItemFromInput, inputError, clearError} from '../actions';
 import '../Styles/ModalWindowAddItem.css';
 
+
 class AddUserData extends Component {
 
     inputRef = React.createRef();
@@ -29,6 +30,7 @@ class AddUserData extends Component {
     //     }
     // };
 
+
     errorDiv() {
         if (this.props.isError === true) {
             return <div className="empty_input_error"> Заголовок не может быть пустым </div>
@@ -51,7 +53,7 @@ class AddUserData extends Component {
                         </button>
                     </div>
                     <div className="input__group">
-                        <input className="input__box" type="text" ref={this.inputRef} onKeyDown={this.handleKeyDown}/>
+                        <input className="input__box" type="text" ref={this.inputRef} onKeyDown={ this.handleKeyDown } />
                         <div>
                             <button className="btn__add" onClick={() => {
                                 this.sendMsg();

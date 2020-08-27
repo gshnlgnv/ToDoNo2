@@ -1,9 +1,8 @@
 table {
-    border: 1px solid grey;
+    border: 1px solid lightgray;
 }
 
 th {
-    border-bottom: 3px solid #B9B29F;
     padding: 10px;
     text-align: left;
 }
@@ -13,7 +12,7 @@ td {
 }
 
 .table__item {
-    width: 200px;
+    width: 100%;
 }
 
 tr:nth-child(odd) {
@@ -25,8 +24,8 @@ tr:nth-child(even) {
 }
 
 .pic {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     cursor: pointer;
 }
 

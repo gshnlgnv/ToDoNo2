@@ -8,6 +8,7 @@ class App extends Component{
   render() {
     return (
         <div className="wrapper">
+
             <div className="app__title">
                 <h2>Список задач</h2>
                 <div>
@@ -15,9 +16,19 @@ class App extends Component{
                     <AddUserDataContainer/>
                 </div>
             </div>
+
             <div>
+
+
                 <TableContainer />
+
+
             </div>
+
+            {/*<footer className="footer">*/}
+
+            {/*</footer>*/}
+
         </div>
     )
   }

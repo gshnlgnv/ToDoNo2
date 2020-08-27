@@ -24,6 +24,9 @@ const initialState = {
 
 export const gettingDataReducer = (state = initialState, action) => {
 
+    // console.log("reducer last id: ", state.data.data[state.data.data.length - 1].id);
+
+
     switch (action.type) {
         case FETCH_DATA_PENDING:
             return {
@@ -53,10 +56,21 @@ export const gettingDataReducer = (state = initialState, action) => {
             };
 
         case ADD_ITEM_FROM_INPUT:
+
+            const lastItem = state.data.data[state.data.data.length - 1];
+            const nextId = lastItem ? (lastItem.id + 1) : 1;
+
             return {
                 ...state,
                 item: action.payload,
-                data: {data: state.data.data.concat({id: Date.now(), title: action.payload,})},
+                data: {
+                    data: state.data.data.concat({
+                        id: nextId,
+                        //state.data.data[state.data.data.length - 1].id + 1,
+                        //Date.now()
+                        title: action.payload,
+                    })
+                },
                 // поменять айди на следующий по порядку / на 1 если массив пуст
             };
 
