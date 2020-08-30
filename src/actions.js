@@ -9,6 +9,11 @@ import {
     CLOSE_MODAL_WINDOW,
     INPUT_ERROR,
     CLEAR_ERROR,
+    EDIT_TITLE,
+    SET_EDITWINDOW_ACTIVE,
+    CLOSE_EDIT_WINDOW,
+    BUTTON_SWITCH,
+    BUTTON_SWITCH_SAVE,
 } from "./consts";
 
 export const getURL = () => {
@@ -85,5 +90,37 @@ export const inputError = () => {
 export const clearError = () => {
     return {
         type: CLEAR_ERROR,
+    }
+};
+
+export const editTitle = (editingID, newTitle) => {
+    return {
+        type: EDIT_TITLE,
+        editingID: editingID,
+        newTitle: newTitle,
+    }
+};
+
+export const setEditWindowActive = () => {
+    return {
+        type: SET_EDITWINDOW_ACTIVE,
+    }
+};
+
+export const closeEditWindow = () => {
+    return {
+        type: CLOSE_EDIT_WINDOW,
+    }
+};
+
+export const btnBackFalse = () => {
+    return {
+        type: BUTTON_SWITCH,
+    }
+};
+
+export const btnSaveTrue = () => {
+    return {
+        type: BUTTON_SWITCH_SAVE
     }
 };

@@ -1,37 +1,40 @@
 import React, {Component} from 'react';
-import {GetURLContainer} from './Components/GetURL';
 import {TableContainer} from './Components/Table';
-import {AddUserDataContainer} from './Components/AddUserData';
 import './Styles/App.css';
+import {BrowserRouter, Route, Link} from "react-router-dom";
+import {EditItemContainer} from "./Components/EditItemComponent";
+import {connect} from 'react-redux';
 
-class App extends Component{
-  render() {
-    return (
-        <div className="wrapper">
+class App extends Component {
 
-            <div className="app__title">
-                <h2>Список задач</h2>
-                <div>
-                    <GetURLContainer/>
-                    <AddUserDataContainer/>
+    renderTable = () => {
+        if (this.props.openEditWindow) {
+            return <Route path={"/items/:id"} component={EditItemContainer}/>
+        } else {
+            return <Route path={"/items/"} component={TableContainer}/>
+        }
+    };
+
+    render() {
+        return (
+            <BrowserRouter>
+                <div className="wrapper">
+                    <div>
+                        {this.renderTable()}
+                    </div>
+                    {/*<footer className="footer">*/}
+                    {/*</footer>*/}
                 </div>
-            </div>
-
-            <div>
-
-
-                <TableContainer />
-
-
-            </div>
-
-            {/*<footer className="footer">*/}
-
-            {/*</footer>*/}
-
-        </div>
-    )
-  }
+            </BrowserRouter>
+        )
+    }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+    return {
+        openEditWindow: state.gettingDataReducer.openEditWindow,
+    }
+};
+
+export const AppContainer = connect(mapStateToProps, null)(App);
+

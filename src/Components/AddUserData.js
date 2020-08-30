@@ -5,9 +5,7 @@ import {bindActionCreators} from "redux";
 import {modalOpenWindow, closeModalWindow, addItemFromInput, inputError, clearError} from '../actions';
 import '../Styles/ModalWindowAddItem.css';
 
-
 class AddUserData extends Component {
-
     inputRef = React.createRef();
 
     sendMsg = () => {
@@ -19,17 +17,6 @@ class AddUserData extends Component {
             this.errorDiv();
         }
     };
-
-    // handleKeyDown = (event) => {
-    //     if (this.inputRef.current.value && event.key === "Enter") {
-    //         this.props.addItemFromInput(this.inputRef.current.value);
-    //         this.props.closeModalWindow();
-    //     } else {
-    //         this.props.inputError();
-    //         this.errorDiv();
-    //     }
-    // };
-
 
     errorDiv() {
         if (this.props.isError === true) {
@@ -53,19 +40,16 @@ class AddUserData extends Component {
                         </button>
                     </div>
                     <div className="input__group">
-                        <input className="input__box" type="text" ref={this.inputRef} onKeyDown={ this.handleKeyDown } />
+                        <input className="input__box" type="text" ref={this.inputRef} onKeyDown={this.handleKeyDown}/>
                         <div>
                             <button className="btn__add" onClick={() => {
                                 this.sendMsg();
                             }}> Создать
                             </button>
-
                             {this.errorDiv()}
-
                         </div>
                     </div>
                 </Modal>
-
             </div>
         );
     }

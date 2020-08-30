@@ -1,0 +1,46 @@
+.title__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn__delete {
+    border-radius: 4px;
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    height: 23px;
+    outline: none;
+}
+
+.input__box {
+    border-bottom-color: red;
+    border-left: #61dafb;
+    border-top: #61dafb;
+    border-right: #61dafb;
+    outline: none;
+}
+
+.container__block {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.btn__block {
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    border: 1px solid #4CAF50;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    width: 100px;
+    outline: none;
+}
+
+.btn__block:hover {
+    background-color: #4CAF50;
+    color: white;
+}
