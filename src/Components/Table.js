@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../Styles/Table.css';
 import {connect} from 'react-redux';
-import trash from '../Pics/trash.png'
+import trash from '../Pics/trash-alt-solid.svg'
 import edit from '../Pics/edit.png'
 import {bindActionCreators} from "redux";
 import {deleteItem, setEditWindowActive} from '../actions';
@@ -20,15 +20,18 @@ class Table extends Component {
                             <td>{index + 1}</td>
                             <td>{item.id}</td>
                             <td className="table__item">{item.title}</td>
-                            <td><Link to={{pathname: `/items/${item.id}`,}}>
-                                <img
-                                    alt="edit"
-                                    className="pic"
-                                    src={edit}
-                                    onClick={() => this.props.setEditWindowActive()}/>
-                            </Link></td>
-                            <td><img alt="delete" className="pic" src={trash}
-                                     onClick={() => this.props.deleteItem(item.id)}/></td>
+                            <td>
+                                <Link to={{pathname: `/items/${item.id}`,}}>
+                                    <button className="btn__edit" onClick={() => this.props.setEditWindowActive()}>
+                                        <i className="far fa-edit"></i>
+                                    </button>
+                                </Link>
+                            </td>
+                            <td>
+                                <button className="btn__delete1" onClick={() => this.props.deleteItem(item.id)}>
+                                    <i className="far fa-trash-alt"></i>
+                                </button>
+                            </td>
                         </tr>
                     ))}
                     </tbody>

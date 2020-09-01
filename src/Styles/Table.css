@@ -23,9 +23,50 @@ tr:nth-child(even) {
     background: lightgray;
 }
 
-.pic {
-    width: 15px;
-    height: 15px;
+.btn__edit {
+    width: 25px;
+    height: 25px;
     cursor: pointer;
+    border-radius: 4px;
+    background-color: white;
+    color: green;
+    border: 1px solid green;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    outline: none;
+    text-align: center;
 }
 
+.btn__edit:hover {
+    color: white;
+    background-color: green;
+}
+
+.btn__delete1 {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: white;
+    color: red;
+    border: 1px solid red;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    outline: none;
+    text-align: center;
+}
+
+.btn__delete1:hover {
+    background-color: red;
+    color: white;
+}
+
+.trash__pic {
+    width: 20px;
+    height: 20px;
+    fill: red;
+}
+
+.trash__pic:hover {
+       fill: white;
+}
