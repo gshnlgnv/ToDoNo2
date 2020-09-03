@@ -19,11 +19,13 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <div className="wrapper">
-                    <div>
+                    <div className="table__wrapper">
                         {this.renderTable()}
                     </div>
-                    {/*<footer className="footer">*/}
-                    {/*</footer>*/}
+
+                    <footer className="footer">
+                        <p className="footer__text">2020</p>
+                    </footer>
                 </div>
             </BrowserRouter>
         )
