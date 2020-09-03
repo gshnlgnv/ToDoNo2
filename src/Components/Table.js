@@ -12,7 +12,7 @@ import {AddUserDataContainer} from "./AddUserData";
 class Table extends Component {
     renderTable() {
         if (this.props.data.length > 0) {
-            return <div >
+            return <div>
                 <table>
                     <tbody>
                     {this.props.data.map((item, index) => (
