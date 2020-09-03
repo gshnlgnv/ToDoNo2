@@ -25,7 +25,7 @@
     color: white;
 }
 
-.btn__close:hover {
+.btn__delete:hover {
     background-color: red;
     color: white;
 }
