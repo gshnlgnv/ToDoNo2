@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {TableContainer} from './Components/Table';
 import './Styles/App.css';
-import {BrowserRouter, Route, Link} from "react-router-dom";
+import {BrowserRouter, Route, Redirect} from "react-router-dom";
 import {EditItemContainer} from "./Components/EditItemComponent";
 import {connect} from 'react-redux';
 
@@ -24,9 +24,10 @@ class App extends Component {
                     </div>
 
                     <footer className="footer">
-                        <p className="footer__text">2020</p>
+                        <p className="footer__text">2020 .</p>
                     </footer>
                 </div>
+                <Redirect from='/' to='/items'/>
             </BrowserRouter>
         )
     }

@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import '../Styles/Table.css';
 import {connect} from 'react-redux';
-import trash from '../Pics/trash-alt-solid.svg'
-import edit from '../Pics/edit.png'
 import {bindActionCreators} from "redux";
 import {deleteItem, setEditWindowActive} from '../actions';
 import {Link} from "react-router-dom";
